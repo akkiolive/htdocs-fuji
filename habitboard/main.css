@@ -1,0 +1,9 @@
+canvas{
+    border: 1px #cccccc solid;
+}
+
+.fixedFooter{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

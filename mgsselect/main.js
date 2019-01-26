@@ -53,6 +53,9 @@
     loadSound("./wav/M1 Garand Single-SoundBible.com-1941178963.wav", "fire2");
     loadSound("./wav/M4A1_Single-Kibblesbob-8540445.wav", "fire3");
     loadSound("./wav/Eject Clip And Re-Load-SoundBible.com-423238371.wav", "reload");
+    loadSound("./audio/select1.wav", "select1");
+    loadSound("./audio/select2.wav", "select2");
+    loadSound("./audio/select3.wav", "select3");
     
     var canvas = document.getElementById("stage");
     var ctx = canvas.getContext('2d');
@@ -148,6 +151,7 @@
 
     document.addEventListener("keyup", function(e){
         if(e.keyCode==69){
+            playSound("select3");
             sels.selecting = 0;
         }
     }, false);
@@ -161,9 +165,13 @@
             sels.list[sels.selectItemIndex].shot();
         }
         if(e.keyCode==69){ // e key
+            if(!sels.selecting) playSound("select1");
             sels.selecting = 1;
         }
         if(sels.selecting){
+            if(e.keyCode>=37 && e.keyCode<=40){
+                playSound("select2");
+            }
             if(e.keyCode==37){ //left key
                 sels.selectItemIndex++;
                 sels.selectItemIndex = sels.selectItemIndex%len;
