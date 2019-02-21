@@ -1,2 +1,13 @@
 @import "https://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css"
 
+#wrapper{
+	border: 10px black solid;
+}
+
+/*#table1 {
+	width: 100%;
+	table-layout: fixed;
+	//word-break: break-word;
+	overflow: scroll;
+}
+*/

@@ -7,6 +7,7 @@ cnn
 favicon.ico
 gamepadtest
 habitboard
+habittracker
 hayaoki
 index.html
 itworks.html
